@@ -6,168 +6,86 @@
     <title>Глибока архітектура — Усі томи</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .tomes-grid {
-            display: flex;
-            gap: 48px;
-            justify-content: center;
-            margin: 80px 0;
-            flex-wrap: wrap;
-        }
-        .tome-card {
-            flex: 0 1 360px;
-            padding: 40px 32px;
-            text-decoration: none;
-            position: relative;
-            transition: all 0.2s ease;
-            border: 1px solid var(--border-raw);
-            background: var(--bg-tape);
-        }
-        .tome-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--accent-neon-lime);
-        }
-        .tome-card-tag {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.5rem;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: var(--accent-neon-lime);
-            margin-bottom: 16px;
-        }
-        .tome-card-number {
-            font-family: 'Syne', sans-serif;
-            font-size: 5rem;
-            font-weight: 800;
-            color: transparent;
-            -webkit-text-stroke: 1.5px var(--accent-neon-lime);
-            line-height: 0.9;
-            margin-bottom: 8px;
-        }
-        .tome-card-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 12px;
-            line-height: 1.25;
-        }
-        .tome-card-desc {
-            font-family: 'Archivo', sans-serif;
-            font-size: 1rem;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-        .tome-card-external {
-            border-style: dashed;
-            border-color: var(--accent-cyan);
-            background: var(--bg-scrap);
-        }
-        .tome-card-external:hover {
-            border-color: var(--accent-neon-pink);
-        }
-        .tome-card-external .tome-card-tag {
-            color: var(--accent-cyan);
-        }
-        .tome-external-note {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.45rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--accent-cyan);
-            margin-top: 16px;
-            padding-top: 12px;
-            border-top: 1px solid var(--border-raw);
-        }
+        .tomes-grid { display: flex; gap: 48px; justify-content: center; margin: 80px 0; flex-wrap: wrap; }
+        .tome-card { flex: 0 1 340px; padding: 40px 32px; text-decoration: none; position: relative; transition: all 0.2s ease; border: 1px solid var(--border-raw); background: var(--bg-tape); }
+        .tome-card:hover { transform: translateY(-4px); border-color: var(--accent-neon-lime); }
+        .tome-card-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent-neon-lime); margin-bottom: 16px; }
+        .tome-card-number { font-family: 'Syne', sans-serif; font-size: 5rem; font-weight: 800; color: transparent; -webkit-text-stroke: 1.5px var(--accent-neon-lime); line-height: 0.9; margin-bottom: 8px; }
+        .tome-card-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 600; color: var(--text-primary); margin-bottom: 12px; line-height: 1.25; }
+        .tome-card-desc { font-family: 'Archivo', sans-serif; font-size: 1rem; color: var(--text-secondary); line-height: 1.5; }
+        .tome-card-external { border-style: dashed; border-color: var(--accent-cyan); background: var(--bg-scrap); }
+        .tome-card-external:hover { border-color: var(--accent-neon-pink); }
+        .tome-card-external .tome-card-tag { color: var(--accent-cyan); }
+        .tome-external-note { font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-cyan); margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border-raw); }
     </style>
 </head>
 <body>
     <div class="main-container">
         <header class="journal-header">
-            <div class="journal-masthead">
-                <span>Глибока архітектура · Том II</span>
-                <span>2026</span>
-            </div>
+            <div class="journal-masthead"><span>Глибока архітектура · Том II</span><span>2026</span></div>
             <div class="chapter-number" style="font-size: 3rem; -webkit-text-stroke: 1px var(--accent-neon-lime);">Томи</div>
             <h1 class="article-title">оберіть том</h1>
             <div class="article-subtitle">Багатотомне соціологічне дослідження впливу цифрових технологій на підлітків</div>
-            <div class="article-meta">
-                <span>Кам'янський еколого-економічний ліцей</span>
-                <span>Соціологія</span>
-                <span>2026</span>
-            </div>
+            <div class="article-meta"><span>Кам'янський еколого-економічний ліцей</span><span>Соціологія</span><span>2026</span></div>
         </header>
-
         <div class="tomes-grid">
-            <!-- Том I — external site -->
             <a href="https://jjjjkek018-create.github.io/sociology/index.html" class="tome-card tome-card-external">
                 <div class="tome-card-tag">// EXTERNAL_VOLUME //</div>
                 <div class="tome-card-number" style="-webkit-text-stroke: 1.5px var(--accent-cyan);">I</div>
                 <div class="tome-card-title">Вплив соціальних мереж на підлітків</div>
-                <div class="tome-card-desc">
-                    Комплексний аналіз: від нейрофізіологічних детермінант до інституційних перспектив подолання кризи. Кібербулінг, цифровий селфхарм, алгоритмічна віктимізація.
-                </div>
-                <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.2em; color: var(--accent-cyan); margin-top: 20px; text-transform: uppercase;">
-                    9 розділів
-                </div>
-                <div class="tome-external-note">
-                    → зовнішній сайт
-                </div>
+                <div class="tome-card-desc">Комплексний аналіз: від нейрофізіологічних детермінант до інституційних перспектив подолання кризи.</div>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.2em; color: var(--accent-cyan); margin-top: 20px; text-transform: uppercase;">9 розділів</div>
+                <div class="tome-external-note">→ зовнішній сайт</div>
             </a>
-
-            <!-- Том II — on this site -->
             <a href="index.html" class="tome-card">
                 <div class="tome-card-tag">// VOLUME_02 //</div>
                 <div class="tome-card-number">II</div>
                 <div class="tome-card-title">ШІ, увага та наступна хвиля</div>
-                <div class="tome-card-desc">
-                    Від великих мовних моделей як агентів соціалізації до нейроінтерфейсів: картографування глибокої архітектури алгоритмічного впливу на підлітків.
-                </div>
-                <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.2em; color: var(--accent-neon-lime); margin-top: 20px; text-transform: uppercase;">
-                    10 розділів
-                </div>
+                <div class="tome-card-desc">Від LLM-агентів соціалізації до нейроінтерфейсів: картографування глибокої архітектури алгоритмічного впливу.</div>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.2em; color: var(--accent-neon-lime); margin-top: 20px; text-transform: uppercase;">10 розділів</div>
             </a>
-
-            <!-- Том III — external site -->
             <a href="https://jjjjkek018-create.github.io/resistance-reconstruction/index.html" class="tome-card tome-card-external">
                 <div class="tome-card-tag">// EXTERNAL_VOLUME //</div>
                 <div class="tome-card-number" style="-webkit-text-stroke: 1.5px var(--accent-cyan);">III</div>
                 <div class="tome-card-title">Спротив, регулювання та реконструкція</div>
-                <div class="tome-card-desc">
-                    Від меж індивідуальної відповідальності до реконструкції соціального договору з технологіями: правові архітектури, низові рухи, альтернативні інфраструктури.
-                </div>
-                <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.2em; color: var(--accent-cyan); margin-top: 20px; text-transform: uppercase;">
-                    5 розділів
-                </div>
-                <div class="tome-external-note">
-                    → зовнішній сайт
-                </div>
+                <div class="tome-card-desc">Від меж індивідуальної відповідальності до реконструкції соціального договору з технологіями.</div>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.2em; color: var(--accent-cyan); margin-top: 20px; text-transform: uppercase;">5 розділів</div>
+                <div class="tome-external-note">→ зовнішній сайт</div>
+            </a>
+            <a href="https://jjjjkek018-create.github.io/case-studies/index.html" class="tome-card tome-card-external">
+                <div class="tome-card-tag">// EXTERNAL_VOLUME //</div>
+                <div class="tome-card-number" style="-webkit-text-stroke: 1.5px var(--accent-cyan);">IV</div>
+                <div class="tome-card-title">Тематичні дослідження</div>
+                <div class="tome-card-desc">Мікроаналіз прецедентів, юрисдикцій та соціальних рухів: від справи Моллі Рассел до цифрового договору України.</div>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.2em; color: var(--accent-cyan); margin-top: 20px; text-transform: uppercase;">10 розділів</div>
+                <div class="tome-external-note">→ зовнішній сайт</div>
+            </a>
+            <a href="https://jjjjkek018-create.github.io/anthropological-question/index.html" class="tome-card tome-card-external">
+                <div class="tome-card-tag">// EXTERNAL_VOLUME //</div>
+                <div class="tome-card-number" style="-webkit-text-stroke: 1.5px var(--accent-cyan);">V</div>
+                <div class="tome-card-title">Антропологічне питання</div>
+                <div class="tome-card-desc">Філософська антропологія алгоритмічної епохи: підліток як біоіндикатор, онтологія цифрового суб'єкта.</div>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.2em; color: var(--accent-cyan); margin-top: 20px; text-transform: uppercase;">5 розділів</div>
+                <div class="tome-external-note">→ зовнішній сайт</div>
             </a>
         </div>
-
-        <!-- Table of contents for this volume -->
         <div style="margin-top: 64px; padding-top: 32px; border-top: 2px solid var(--border-raw);">
-            <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 600; color: var(--text-primary); margin-bottom: 24px;">
-                &gt; ЗМІСТ ЦЬОГО ТОМУ
-            </h2>
+            <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 600; color: var(--text-primary); margin-bottom: 24px;">&gt; ЗМІСТ ЦЬОГО ТОМУ</h2>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px 32px;">
-                <a href="index.html" style="font-family: 'Archivo', sans-serif; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem;">0. Вступ: від опису кризи до прогнозування</a>
+                <a href="index.html" style="font-family: 'Archivo', sans-serif; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem;">0. Вступ</a>
                 <a href="llm_socialisation.html" style="font-family: 'Archivo', sans-serif; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem;">I. LLM як агенти соціалізації</a>
-                <a href="synthetic.html" style="font-family: 'Archivo', sans-serif; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem;">II. Синтетичні медіа та кінець довіри</a>
+                <a href="synthetic.html" style="font-family: 'Archivo', sans-serif; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem;">II. Синтетичні медіа</a>
                 <a href="radicalisation.html" style="font-family: 'Archivo', sans-serif; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem;">III. Алгоритмічна радикалізація</a>
                 <a href="attention.html" style="font-family: 'Archivo', sans-serif; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem;">IV. Нові рубежі економіки уваги</a>
                 <a href="growing.html" style="font-family: 'Archivo', sans-serif; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem;">V. Цифрове дорослішання</a>
-                <a href="generative.html" style="font-family: 'Archivo', sans-serif; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem;">VI. Генеративний ШІ та творчість</a>
+                <a href="generative.html" style="font-family: 'Archivo', sans-serif; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem;">VI. Генеративний ШІ</a>
                 <a href="reality.html" style="font-family: 'Archivo', sans-serif; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem;">VII. Доповнена реальність</a>
                 <a href="biointegration.html" style="font-family: 'Archivo', sans-serif; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem;">VIII. Горизонти біоінтеграції</a>
                 <a href="projects.html" style="font-family: 'Archivo', sans-serif; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem;">IX. Проєктування для процвітання</a>
                 <a href="conclusions.html" style="font-family: 'Archivo', sans-serif; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem;">X. Висновки</a>
             </div>
         </div>
-
-        <footer class="journal-footer">
-            <span>Кам'янка · 2026</span>
-            <span>Глибока архітектура · Том II</span>
-        </footer>
+        <footer class="journal-footer"><span>Кам'янка · 2026</span><span>Глибока архітектура · Том II</span></footer>
     </div>
 </body>
 </html>
